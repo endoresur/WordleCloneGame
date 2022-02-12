@@ -1,3 +1,7 @@
+/*
+//// Main ////
+*/
+
 * {
     color: #ffff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
@@ -8,6 +12,10 @@ body {
     background-color: #121213;
 }
 
+/*
+//// Game ////
+*/
+
 .game-container {
     height: 90vh;
     display: flex;
@@ -15,6 +23,10 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+
+/*
+//// Tile ////
+*/
 
 .title-container {
     text-align: center;
@@ -26,6 +38,25 @@ body {
     width: 300px;
     margin-bottom: 30px;
 }
+
+.tile-container div {
+    display: flex;
+}
+
+.tile-container .tile {
+    width: 62px;
+    height: 62px;
+    border: 2px solid #3a3a3c;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+}
+
+/*
+//// Key ////
+*/
 
 .key-container {
     width: 510px;

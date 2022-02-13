@@ -81,3 +81,11 @@ body {
 .key-container button:nth-child(28) {
     width: 68px;
 }
+
+/*
+//// Message ////
+*/
+
+.message-container {
+    height: 30px;
+}

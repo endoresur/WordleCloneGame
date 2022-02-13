@@ -111,15 +111,26 @@ const flipTile = () => {
     const rowTiles = document.querySelector('#guessRow-' + currentRow).childNodes;
     rowTiles.forEach((tile, index) => {
         const dataLetter = tile.getAttribute('data');
-        if (dataLetter === wordle[index]) {
-            tile.classList.add('green-overlay');
-        } 
-        else if (wordle.includes(dataLetter)) {
-            tile.classList.add('yellow-overlay');
-        }
-        else {
-            tile.classList.add('grey-overlay');
-        }
 
+        setTimeout(() => {
+            tile.classList.add('flip');
+            if (dataLetter === wordle[index]) {
+                tile.classList.add('green-overlay');
+                addColorToKey(dataLetter, 'green-overlay');
+            } 
+            else if (wordle.includes(dataLetter)) {
+                addColorToKey(dataLetter, 'yellow-overlay');
+                tile.classList.add('yellow-overlay');
+            }
+            else {
+                addColorToKey(dataLetter, 'grey-overlay');
+                tile.classList.add('grey-overlay');
+            }
+        }, 500 * index);
     })
+}
+
+const addColorToKey = (keyLetter, color) => {
+    const key = document.getElementById(keyLetter);
+    key.classList.add(color);
 }

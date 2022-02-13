@@ -25,7 +25,7 @@ body {
 }
 
 /*
-//// Tile ////
+//// Title ////
 */
 
 .title-container {
@@ -33,6 +33,10 @@ body {
     width: 510px;
     border-bottom: 1px solid #3a3a3c;
 }
+
+/*
+//// Tile ////
+*/
 
 .tile-container {
     width: 300px;
@@ -52,6 +56,22 @@ body {
     justify-content: center;
     align-items: center;
     margin: 2px;
+}
+
+.tile.flip {
+    animation: 0.5s linear flipping;
+}
+
+@keyframes flipping {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
 }
 
 /*
@@ -88,6 +108,7 @@ body {
 
 .message-container {
     height: 30px;
+    margin: 20px;
 }
 
 .message-container p {
